@@ -1,0 +1,29 @@
+{
+  "name": "electron-clock",
+  "version": "1.0.0",
+  "description": "Electron Clock application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesourorange/electron-clock.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "clock",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/thesourorange/electron-clock/issues"
+  },
+  "homepage": "https://github.com/thesourorange/electron-clock#readme"
+}
