@@ -1,3 +1,5 @@
+'use strict';
+
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
@@ -9,11 +11,11 @@ const url = require('url')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+var mainWindow = null;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 417, height: 442, resizable: false})
+  mainWindow = new BrowserWindow({width: 417, height: 442, resizable: false, autoHideMenuBar: true})
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
