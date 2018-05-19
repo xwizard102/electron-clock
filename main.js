@@ -20,7 +20,7 @@ function createWindow () {
     slashes: true
   }))
 
-  mainWindow.on('closed',  () => {
+  mainWindow.on('closed', () => {
     mainWindow = null
   })
 }
@@ -31,7 +31,7 @@ app.on('window-all-closed',  () => {
   app.quit()
 })
 
-app.on('activate',  () => {
+app.on('activate', () => {
   if (mainWindow === null) {
     createWindow()
   }
