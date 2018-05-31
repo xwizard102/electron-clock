@@ -7,6 +7,7 @@
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "package-win": "electron-packager . electron-clock --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.ProductName=\"Electron Clock\"",
     "package-linux": "electron-packager . electron-clock --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "create-installer-win": "node installers/windows/createinstaller.js",
     "start": "electron ."
   },
   "repository": {
@@ -22,9 +23,10 @@
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
-  "devDependencies": {
+  "dependencies": {
     "electron": "~1.7.5",
-    "electron-packager": "^12.0.2"
+    "electron-packager": "^12.0.2",
+    "electron-winstaller": "^2.6.4"
   },
   "bugs": {
     "url": "https://github.com/thesourorange/electron-clock/issues"

@@ -1,5 +1,12 @@
 'use strict';
 
+//handle setupevents as quickly as possible
+const setupEvents = require('./installers/setupEvents');
+
+if (setupEvents.handleSquirrelEvent()) {
+   return;
+}
+
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
