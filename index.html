@@ -4,16 +4,44 @@
     <meta charset="UTF-8">
     <title>Clock</title>
   </head>
-  <body>
-      <div style="overflow: hidden">
-        <canvas id="canvas" width="400" height="400" style="background-color:#333"/>
+  <style>
+      /* The Close Button */
+    .close {
+        color:white;
+        float: right;
+        font-size: 24px;
+        border:2px solid white;    
+        border-radius:50%;
+        height:24px;
+        width:24px;
+       -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        z-index: 99;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #696969;
+        text-decoration: none;
+        cursor: pointer;
+    }
+  </style>
+   <script>
+    var app = require('./renderer.js').app;
+    
+    require('electron-disable-file-drop')
+
+  </script>
+  <body style="-webkit-app-region: drag;">
+      <div style="overflow: hidden;">
+        <div class="close" style="position:absolute; right:5px; top:0px;" onclick="app.quit();">
+            <div style="margin-left:5px; margin-top:-2px;">&times;</div>
+        </div>
+        <canvas id="canvas" width="120" height="120" style="border: solid white 2px; background-color:#708090; opacity:0.7;"/>
       </div>
   </body>
 
   <script>
-    require('./renderer.js')
-    require('electron-disable-file-drop')
-
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var radius = canvas.height / 2;
@@ -38,9 +66,9 @@
       ctx.fill();
 
       grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
-      grad.addColorStop(0, '#333');
+      grad.addColorStop(0, '#696969');
       grad.addColorStop(0.5, 'white');
-      grad.addColorStop(1, '#333');
+      grad.addColorStop(1, '#696969');
       
       ctx.strokeStyle = grad;
       ctx.lineWidth = radius*0.1;
@@ -48,7 +76,7 @@
 
       ctx.beginPath();
       ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
-      ctx.fillStyle = '#333';
+      ctx.fillStyle = '#696969';
       ctx.fill();
     }
 

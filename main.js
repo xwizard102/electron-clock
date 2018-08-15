@@ -18,7 +18,12 @@ var mainWindow = null;
 
 function createWindow () {
 
-  mainWindow = new BrowserWindow({width: 420, height: 452, resizable: false, autoHideMenuBar: true})
+  mainWindow = new BrowserWindow({width: 168, height: 170, 
+                                  resizable: false, 
+                                  frame: false,
+                                  transparent: true, 
+                                  alwaysOnTop: true,
+                                  autoHideMenuBar: true})
   mainWindow.setMenu(null);
  
   mainWindow.loadURL(url.format({
