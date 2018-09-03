@@ -12,8 +12,9 @@
         font-size: 16px;
         border:2px solid #696969;    
         border-radius:50%;
-        height:16px;
-        width:16px;
+        height:17px;
+        width:17px;
+        font-weight: bold;
        -moz-border-radius:50%;
         -webkit-border-radius:50%;
         z-index: 99;
@@ -22,6 +23,7 @@
     .close:hover,
     .close:focus {
         color: #c8c8c8;
+        font-weight: bold;
         text-decoration: none;
         cursor: pointer;
     }
@@ -41,8 +43,8 @@
   </script>
   <body>
       <div style="overflow: hidden;">
-        <div class="close" style="position:absolute; right:35px; top:0px;" onclick="app.quit();">
-            <div style="margin-left:4px; margin-top: -1px;">&times;</div>
+        <div class="close" style="position:absolute; right:0px; top:0px;" onclick="app.quit();">
+            <div style="margin-left:4px; margin-top: 0px;">&times;</div>
         </div>
         <canvas id="canvas" class="canvas" width="80" height="80" style="-webkit-app-region: drag; border: solid white 2px; background-color:#696969; opacity:0.6;"/>
       </div>
