@@ -18,7 +18,7 @@ var mainWindow = null;
 
 function createWindow () {
 
-  mainWindow = new BrowserWindow({width: 103, height: 108, 
+  mainWindow = new BrowserWindow({width: 108, height: 108, 
                                   resizable: false, 
                                   frame: false,
                                   transparent: true, 
